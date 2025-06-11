@@ -8,24 +8,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print APP_ENV
-        env:
-          APP_ENV: ${{ vars.APP_ENV }}
-        run: echo "Ambiente atual: ${APP_ENV}"
+        run: |
+          echo "Ambiente atual: ${{ vars.APP_ENV }}"
 
   vars-context:
     name: Usando SUPPORT_EMAIL
     runs-on: ubuntu-latest
     steps:
       - name: Print SUPPORT_EMAIL
-        env:
-          SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}
-        run: echo "E-mail de suporte: ${SUPPORT_EMAIL}"
+        run: |
+          echo "E-mail de suporte:  ${{ vars.SUPPORT_EMAIL }}"
 
   secrets-context:
     name: Usando segredo API_KEY
     runs-on: ubuntu-latest
     steps:
       - name: Print masked API_KEY
-        env:
-          API_KEY: ${{ secrets.API_KEY }}
-        run: echo "Chave da API: ${API_KEY}"
+        run: |
+          echo "Chave da API: ${{ secrets.API_KEY }}"
