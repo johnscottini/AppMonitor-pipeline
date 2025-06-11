@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   env-context:
-    name: 🌐 Usando APP_ENV do contexto vars
+    name: Usando APP_ENV do contexto vars
     runs-on: ubuntu-latest
     env:
       APP_ENV: ${{ vars.APP_ENV }}
@@ -13,14 +13,14 @@ jobs:
         run: echo "Ambiente atual: $APP_ENV"
 
   vars-context:
-    name: 🧾 Usando SUPPORT_EMAIL
+    name: Usando SUPPORT_EMAIL
     runs-on: ubuntu-latest
     steps:
       - name: Print SUPPORT_EMAIL
         run: echo "E-mail de suporte: ${{ vars.SUPPORT_EMAIL }}"
 
   secrets-context:
-    name: 🔐 Usando segredo API_KEY
+    name: Usando segredo API_KEY
     runs-on: ubuntu-latest
     steps:
       - name: Print masked API_KEY
