@@ -71,4 +71,5 @@ jobs:
           echo "::notice::Verifique o artefato gerado no job anterior."
 
       - name: Incluir link do artefato
-        run: echo "::notice::Artefato disponível em: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        run: |
+          echo "::notice::Artefato disponível em: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
