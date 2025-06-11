@@ -2,26 +2,25 @@ name: Run Monitor Pipeline
 
 on: [push]
 
-env:
-  APP_ENV: ${{ vars.APP_ENV }}
-
 jobs:
   env-context:
-    name: Use variável Global ENV
+    name: 🌐 Use Global ENV Variable
     runs-on: ubuntu-latest
+    env:
+      APP_ENV: ${{ vars.APP_ENV }}
     steps:
       - name: Print APP_ENV
         run: echo "Ambiente atual: $APP_ENV"
 
   vars-context:
-    name: Use contexto VARS
+    name: 🧾 Use VARS Context
     runs-on: ubuntu-latest
     steps:
       - name: Print SUPPORT_EMAIL from vars
         run: echo "E-mail de suporte: ${{ vars.SUPPORT_EMAIL }}"
 
   secrets-context:
-    name: Use segredo
+    name: 🔐 Use Secret
     runs-on: ubuntu-latest
     steps:
       - name: Print API_KEY (masked)
