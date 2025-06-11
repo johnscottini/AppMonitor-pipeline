@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Print APP_ENV
         env:
-            APP_ENV: ${{ vars.APP_ENV }}
+          APP_ENV: ${{ vars.APP_ENV }}
         run: echo "Ambiente atual: $APP_ENV"
 
   vars-context:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Print SUPPORT_EMAIL
         env:
-            SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}
+          SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}
         run: echo "E-mail de suporte: $SUPPORT_EMAIL"
 
   secrets-context:
@@ -27,5 +27,5 @@ jobs:
     steps:
       - name: Print masked API_KEY
         env:
-            API_KEY: ${{ secrets.API_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
         run: echo "Chave da API: $API_KEY"
