@@ -8,9 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       APP_ENV: ${{ vars.APP_ENV }}
-    steps:
-      - name: Print APP_ENV
-        run: echo "Ambiente atual: $APP_ENV"
 
   vars-context:
     name: 🧾 Use VARS Context
