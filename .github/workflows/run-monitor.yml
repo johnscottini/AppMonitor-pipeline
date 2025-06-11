@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print APP_ENV
-        run: echo "Ambiente atual: ${{ vars.APP_ENV }}"
+        run: |
+          echo "Ambiente atual: ${{ vars.APP_ENV }}"
 
   vars-context:
     name: Usando SUPPORT_EMAIL
