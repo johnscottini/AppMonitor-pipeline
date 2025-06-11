@@ -58,18 +58,18 @@ jobs:
     summary:
       name: Gerar resumo do pipeline
       runs-on: ubuntu-latest
-    needs: package
-    steps:
-      - name: Mostrar informações do ambiente
-        run: |
-          echo "Sistema operacional do runner: ${{ runner.os }}"
-          echo "Branch executada: ${{ github.ref_name }}"
+      needs: package
+      steps:
+        - name: Mostrar informações do ambiente
+          run: |
+            echo "Sistema operacional do runner: ${{ runner.os }}"
+            echo "Branch executada: ${{ github.ref_name }}"
 
-      - name: Mensagem de resumo
-        run: |
-          echo "Pipeline executado com sucesso."
-          echo "::notice::Verifique o artefato gerado no job anterior."
+        - name: Mensagem de resumo
+          run: |
+            echo "Pipeline executado com sucesso."
+            echo "::notice::Verifique o artefato gerado no job anterior."
 
-      - name: Incluir link do artefato
-        run: |
-          echo "::notice::Artefato disponível em: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        - name: Incluir link do artefato
+          run: |
+            echo "::notice::Artefato disponível em: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
