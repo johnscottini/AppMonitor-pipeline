@@ -2,9 +2,6 @@ name: Run Monitor Pipeline
 
 on: [push]
 
-env:
-  APP_ENV: ${{ vars.APP_ENV }}
-
 jobs:
   env-context:
     name: Use variável Global ENV
