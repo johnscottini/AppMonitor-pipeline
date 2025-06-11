@@ -27,3 +27,10 @@ As **tags** servem para **marcar versões importantes** do código — como uma 
 - Facilitam o **deploy automático** de versões específicas.
 - Usadas para **versionamento semântico** (ex: `v1.0.0`, `v2.1.3`).
 - São úteis para saber **exatamente qual versão foi entregue** em cada ambiente e acompanhar a evolução do projeto.
+
+### Diferença entre variável e secret e ambientes:
+
+As **variáveis**, são utilizadas para guardar informações não secretas, que podem ser manipuladas e utilizadas no arquivo de CI para definir o nome de algum step, uma regra condicional ou outro valor apresentado em tela.
+Já os **secrets**, são utilizados para armazenar informações secretas, que não podem ser expostas e definidas literalmente na aplicação, além de facilitar seu manuseio e manutenção.
+
+Além de poder definir esses valores para o repositório, é possível definir por ambiente, dessa forma, podem ser aplicadas regras específicas para cada ambiente, como aprovação obrigatória ou wait time antes do deploy. Além de poder possuir valores diferentes para o ambiente de dev e teste, por exemplo.

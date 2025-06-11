@@ -1,0 +1,28 @@
+name: Run Monitor Pipeline
+
+on: [push]
+
+jobs:
+  env-context:
+    name: Usando APP_ENV do contexto vars
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print APP_ENV
+        run: |
+          echo "Ambiente atual: ${{ vars.APP_ENV }}"
+
+  vars-context:
+    name: Usando SUPPORT_EMAIL
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print SUPPORT_EMAIL
+        run: |
+          echo "E-mail de suporte:  ${{ vars.SUPPORT_EMAIL }}"
+
+  secrets-context:
+    name: Usando segredo API_KEY
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print masked API_KEY
+        run: |
+          echo "Chave da API: ${{ secrets.API_KEY }}"
