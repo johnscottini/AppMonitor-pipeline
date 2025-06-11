@@ -4,21 +4,24 @@ on: [push]
 
 jobs:
   env-context:
-    name: 🌐 Use Global ENV Variable
+    name: 🌐 Usando APP_ENV do contexto vars
     runs-on: ubuntu-latest
     env:
       APP_ENV: ${{ vars.APP_ENV }}
+    steps:
+      - name: Print APP_ENV
+        run: echo "Ambiente atual: $APP_ENV"
 
   vars-context:
-    name: 🧾 Use VARS Context
+    name: 🧾 Usando SUPPORT_EMAIL
     runs-on: ubuntu-latest
     steps:
-      - name: Print SUPPORT_EMAIL from vars
+      - name: Print SUPPORT_EMAIL
         run: echo "E-mail de suporte: ${{ vars.SUPPORT_EMAIL }}"
 
   secrets-context:
-    name: 🔐 Use Secret
+    name: 🔐 Usando segredo API_KEY
     runs-on: ubuntu-latest
     steps:
-      - name: Print API_KEY (masked)
+      - name: Print masked API_KEY
         run: echo "Chave da API: ${{ secrets.API_KEY }}"
