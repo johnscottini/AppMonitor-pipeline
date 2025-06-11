@@ -2,7 +2,7 @@
 
 ## Git na Entrega Contínua
 
-O **Git** é essencial para a *entrega contínua* porque permite controlar versões do código e garantir que mudanças sejam feitas de forma organizada, segura e rastreável. É possível configurar regras de proteção para certas branchs ou permissão para realizar certas ações, protegente o repositório de erros.
+O **Git** é essencial para a *entrega contínua* porque permite controlar versões do código e garantir que mudanças sejam feitas de forma organizada, segura e rastreável. É possível configurar regras de proteção para certas branches ou permissão para realizar certas ações, protegendo o repositório de erros.
 
 ### Branches
 
