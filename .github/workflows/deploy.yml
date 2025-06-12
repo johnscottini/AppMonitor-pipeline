@@ -1,20 +1,18 @@
 name: Deploy Pipeline
 
-on:  
+on:
   push:
     branches:
       - main
 
-stages:
-  - deploy
-
-deploy_to_production:
-  stage: deploy
-  script:
-    - echo "Deploying to $PROD_DOMAIN"
-  environment:
-    name: production
-    url: https://$PROD_DOMAIN
-  when: manual
-  only:
-    - main  
+jobs:
+  deploy_to_production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://${{ vars.PROD_DOMAIN }}
+    steps:
+      - name: Simulate deploy
+        run: |
+          echo "Deploying to ${{ vars.PROD_DOMAIN }}"
