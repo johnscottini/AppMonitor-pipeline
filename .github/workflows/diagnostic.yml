@@ -44,7 +44,7 @@ jobs:
 
             ISSUE_BODY+="\n**Solução sugerida:**\nAcesse *Settings > Secrets and variables > Actions* e defina as variáveis acima."
 
-            gh issue create --title "Variáveis obrigatórias ausentes" --body "$ISSUE_BODY" --label "bug,diagnostic"
+            gh issue create --title "Variáveis obrigatórias ausentes" --body "$ISSUE_BODY" --label "bug,ci"
 
             exit 1
           else
