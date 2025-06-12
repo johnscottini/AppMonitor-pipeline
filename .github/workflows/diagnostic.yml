@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up GitHub CLI
-        uses: cli/cli-action@v2
+        uses: actions/checkout@v3
 
       - name: Check required environment variables
         env:
