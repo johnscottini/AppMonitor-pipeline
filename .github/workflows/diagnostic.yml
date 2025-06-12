@@ -24,16 +24,16 @@ jobs:
 
           if [ -z "${{ secrets.APP_ENV }}" ]; then
             echo "APP_ENV não está definida."
-            MISSING_VARS+="APP_ENV\n"
-            ISSUE_BODY+="- APP_ENV\n"
+            MISSING_VARS+="APP_ENV"
+            ISSUE_BODY+="- APP_ENV"
           else
             echo "APP_ENV está definida."
           fi
 
           if [ -z "${{ secrets.API_KEY }}" ]; then
             echo "API_KEY não está definida."
-            MISSING_VARS+="API_KEY\n"
-            ISSUE_BODY+="- API_KEY\n"
+            MISSING_VARS+="API_KEY"
+            ISSUE_BODY+="- API_KEY"
           else
             echo "API_KEY está definida."
           fi
