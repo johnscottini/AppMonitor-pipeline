@@ -1,0 +1,20 @@
+name: Deploy Pipeline
+
+on:  
+  push:
+    branches:
+      - main
+
+stages:
+  - deploy
+
+deploy_to_production:
+  stage: deploy
+  script:
+    - echo "Deploying to $PROD_DOMAIN"
+  environment:
+    name: production
+    url: https://$PROD_DOMAIN
+  when: manual
+  only:
+    - main  
